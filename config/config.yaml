@@ -1,0 +1,19 @@
+model_config:
+  model_name: "meta-llama/Llama-2-7b-hf"
+  max_length: 512
+  batch_size: 4
+  learning_rate: 2e-5
+  num_epochs: 3
+  gradient_accumulation_steps: 8
+  warmup_steps: 100
+  weight_decay: 0.01
+  output_dir: "models/checkpoints"
+  
+data_config:
+  train_path: "data/processed/train.csv"
+  val_path: "data/processed/val.csv"
+  raw_data_path: "data/raw/data.csv"
+  
+wandb_config:
+  project: "LLM-Llama-fine-tuning"
+  entity: "neerajmehta15-stanza-living"
