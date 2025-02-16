@@ -61,12 +61,7 @@ class LlamaTrainer:
         
         wandb.finish()
 
-    def generate_text(
-        self,
-        prompt: str,
-        max_new_tokens: int = 100,
-        temperature: float = 0.7
-    ) -> str:
+    def generate_text(self, prompt: str, max_new_tokens: int = 100, temperature: float = 0.7) -> str:
         inputs = self.tokenizer(
             f"[INST] {prompt} [/INST]",
             return_tensors="pt",
